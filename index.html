@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Save the date - Likhitha&Srujan</title>
+<meta name="description" content="jQuery Circular CountDown Demo">
+<!-- STYLESHEETS : begin -->
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/icomonn.css">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Catamaran' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Della+Respira' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Clicker+Script' rel='stylesheet' type='text/css'>
+<!-- STYLESHEETS : end -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+<script src="js/jquery.knob.js"></script>
+<script src="js/jquery.ccountdown.js"></script>
+<script src="js/init.js"></script>
+<!--[if lte IE 7]><script src="css/lte-ie7.js"></script><![endif]-->
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-40477669-2']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+</script>
+</script>
+<head>
+
+</head>
+<div id="Menu">
+    <a href="#Clock">SAVE THE DATE</a><br/>
+</div>
+<body class=" indexpage">
+    <div align="center">
+        <h1><center>Likhitha & Srujan,</center></h1>
+        <p><center>happily ever after</center></p>
+        <img src="img/ElephantDoli.jpg" id="elephant">
+        <div class="core" style="padding-top:40px" align="center">
+            <div class="ccounter" align="center" id="Clock">
+                <div align = "center" id="ClockHeader">
+                    <h1><strong><center>Save the Date</center></strong></h1>
+                    <h2><strong><center>August 20, 2016</center></strong></h2>
+                    <h4><center>at The Willard, Washington D.C.</center></h4>
+                </div>
+                <ul class="ch-grid" align="center">
+                    <li>
+                        <div class="ch-item">
+                           <input class="knob days" data-width="130" data-min="0" data-max="365" data-displayPrevious=true data-fgColor= "#ffffff" data-readOnly="true"
+                            data-skin="tron" data-thickness=".07">
+                            <p>Days</p>
+                        </div>	
+                    </li>
+                    <li>
+                        <div class="ch-item">
+                           <input class="knob hour" data-width="130" data-min="0" data-max="24" data-displayPrevious=true data-fgColor="#ffffff" data-readOnly="true"
+                data-skin="tron" data-thickness=".07" value="1">
+                            <p>Hours</p>
+                        </div>	
+                    </li>
+                    <li>
+                        <div class="ch-item">
+                           <input class="knob minute" data-width="130" data-min="0" data-max="60" data-displayPrevious=true data-fgColor="#ffffff" data-readOnly="true"
+                data-skin="tron" data-thickness=".07" value="1">
+                            <p>Minutes</p>
+                        </div>	
+                    </li>
+                    <li>
+                        <div class="ch-item">
+                           <input class="knob second" data-width="130" data-min="0" data-max="60" data-displayPrevious=true data-fgColor="#ffffff" data-readOnly="true"
+                data-skin="tron" data-thickness=".07" value="0" data-bgcolor="#eee">
+                            <p>Seconds</p>
+                        </div>	
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- FOOTER : begin -->
+    <footer class="centered">
+        <p>Made with <i class=" icon-heart-empty"></i> by <a href="mailto:likhitha@outlook.com">likhitha</a> & <a href="mailto:jonnadul@gmail.com">srujan</a></p>
+    </footer>
+    <!-- FOOTER : end -->
+
+    <script>
+        //enter the count down date using the format year, month, day, time:time
+			$(".ccounter").ccountdown(2016,08,20,'08:00');
+    </script>
+</body>
+
+</html>

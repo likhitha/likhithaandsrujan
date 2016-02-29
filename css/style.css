@@ -1,0 +1,176 @@
+#Menu{
+    padding-top:8px;
+    padding-bottom:55px;
+    font-size: 13px;
+    text-align: center;
+}
+#Menu a { color: crimson;  text-decoration:none;}
+
+body { 
+    margin: 0; 
+    font-family: 'Poiret One', cursive;
+    color: #363a3f; 
+    background-color: white;
+    padding-top: 15px;
+    font-size: 30px;
+    font-weight: lighter;}
+#elephant{
+    padding-top: 10px;
+    padding-bottom: 15px;
+    padding-left:10px;
+    width:250px;
+    height:300px;
+}
+#Clock{
+    background-color: crimson;
+    padding-top: 40px;
+    padding-bottom:40px;
+    color: white;
+     font-size: 14px;
+    align-items: center;
+}
+
+#ClockHeader{
+    font-family: 'Poiret One', cursive;
+    color:white;
+}
+#ClockHeader h1{
+    font-family: 'Clicker Script', cursive;
+    font-size: 40px;
+}
+#ClockHeader h4{
+    padding-bottom: 20px;
+}
+ul li{
+      	display: inline-block;
+      	text-align: center;
+        padding-top:0px;
+      	padding-left: 5px;
+      	padding-right: 5px;
+        padding-bottom: 5px;
+      	font-family: 'Poiret One', cursive;
+        font-weight: lighter;
+      }
+footer { 
+    font-family: 'Pacifico', cursive; 
+    font-size: 14px;
+    position: relative; 
+    padding: 35px 0 45px 0; 
+    font-size: 0.9em;
+    font-weight: 100; }
+footer p { 
+    margin: 0;
+    font-size: 14px; }
+footer.centered { 
+    text-align: center; }
+
+footer { color: #616871; font-size: 14px;}
+footer a { color: crimson;  text-decoration:none; font-size: 14px;}
+
+/* -----------------------------------------------------
+
+    RESPONSIVE
+
+----------------------------------------------------- */
+
+/* SCREEN WIDTH */
+#screen-width { content: "1200"; }
+
+/* ------------------------------
+
+    SMALL DESKTOP
+
+------------------------------ */
+
+@media (max-width: 1199px) {
+    /* SCREEN WIDTH */
+    #screen-width { content: "1199"; }
+
+}
+
+/* ------------------------------
+
+    LARGE TABLET
+
+------------------------------ */
+
+@media (max-width: 979px) {
+
+    header, #description, #core, #widgets, footer { font-size: 1.1em; }
+
+    /* PROFILE */
+
+    #profile .profile-inner { padding-left: 40px; padding-right: 40px; }
+   
+
+    /* HEADER */
+
+    header { padding: 60px 0 30px 0; }
+    header .row { margin: 0; }
+    header .offset1 { margin: 0; }
+    header .span3,
+    header .span7 { margin: 0; width: auto; float: none; }
+    #logo { padding-bottom: 30px; text-align: center; }
+    header #logo img { display: inline-block; }
+
+    /* CORE */
+
+    #core { padding-top: 30px; }
+
+    #snipet-widget { padding: 0 60px 0 60px; }
+    #snipet-widget h3 { margin-bottom: 20px; }
+    #snipet-widget .row { margin: auto; }
+    #snipet-widget .title,
+    #snipet-widget .content { float: none; margin: 0; width: auto; }
+
+    /* FOOTER */
+
+    footer { padding-left: 20px; padding-right: 20px; }
+
+    /* SCREEN WIDTH */
+    #screen-width { content: "979"; }
+
+}
+
+/* ------------------------------
+
+    SMALL TABLET
+
+------------------------------ */
+
+@media (max-width: 767px) {
+
+    body { padding: 0; }
+
+    /* PROFILE */
+
+    #profile .profile-inner { padding-left: 20px; padding-right: 20px; }
+    /* TITLE */
+
+    #title { margin: 0 20px 0 20px; }
+    /* FOOTER */
+
+    footer p { padding-bottom: 30px; }
+    footer .social-icons { margin: 0 0 20px 0; }
+    footer .back-to-top { position: relative; top: auto; right: auto; margin: auto; }
+
+    /* SCREEN WIDTH */
+    #screen-width { content: "767"; }
+
+}
+
+/* ------------------------------
+
+    PHONE
+
+------------------------------ */
+
+@media (max-width: 480px) {
+    header, #description, #core, #widgets { font-size: 0.9em; }
+    /* PROFILE */
+    #profile .profile-inner { padding: 20px; }
+    /* TITLE */
+    #title h1 { font-size: .8em; }
+    /* SCREEN WIDTH */
+    #screen-width { content: "480"; }
+}
