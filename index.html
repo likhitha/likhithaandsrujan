@@ -3,25 +3,26 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Save the date - Likhitha&Srujan</title>
-<meta name="description" content="jQuery Circular CountDown Demo">
 <!-- STYLESHEETS : begin -->
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/icomonn.css">
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Catamaran' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Della+Respira' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Josefin+Sans&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Clicker+Script' rel='stylesheet' type='text/css'>
-<!-- STYLESHEETS : end -->
+<link href='https://fonts.googleapis.com/css?family=Rouge+Script' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
 <script src="js/jquery.knob.js"></script>
 <script src="js/jquery.ccountdown.js"></script>
 <script src="js/init.js"></script>
-<!--[if lte IE 7]><script src="css/lte-ie7.js"></script><![endif]-->
 
-<script type="text/javascript">
+<!--<script type="text/javascript">
     var _gaq = _gaq || [];
 	  _gaq.push(['_setAccount', 'UA-40477669-2']);
 	  _gaq.push(['_trackPageview']);
@@ -32,70 +33,458 @@
 		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	  })();
 
-</script>
-</script>
-<head>
+</script>-->
 
-</head>
-<div id="Menu">
-    <a href="#Clock">SAVE THE DATE</a><br/>
-</div>
-<body class=" indexpage">
-    <div align="center">
-        <h1><center>Likhitha & Srujan,</center></h1>
-        <p><center>happily ever after</center></p>
-        <img src="img/ElephantDoli.jpg" id="elephant">
-        <div class="core" style="padding-top:40px" align="center">
-            <div class="ccounter" align="center" id="Clock">
-                <div align = "center" id="ClockHeader">
-                    <h1><strong><center>Save the Date</center></strong></h1>
-                    <h2><strong><center>August 20, 2016</center></strong></h2>
-                    <h4><center>at The Willard, Washington D.C.</center></h4>
-                </div>
-                <ul class="ch-grid" align="center">
-                    <li>
-                        <div class="ch-item">
-                           <input class="knob days" data-width="130" data-min="0" data-max="365" data-displayPrevious=true data-fgColor= "#ffffff" data-readOnly="true"
-                            data-skin="tron" data-thickness=".07">
-                            <p>Days</p>
-                        </div>	
-                    </li>
-                    <li>
-                        <div class="ch-item">
-                           <input class="knob hour" data-width="130" data-min="0" data-max="24" data-displayPrevious=true data-fgColor="#ffffff" data-readOnly="true"
-                data-skin="tron" data-thickness=".07" value="1">
-                            <p>Hours</p>
-                        </div>	
-                    </li>
-                    <li>
-                        <div class="ch-item">
-                           <input class="knob minute" data-width="130" data-min="0" data-max="60" data-displayPrevious=true data-fgColor="#ffffff" data-readOnly="true"
-                data-skin="tron" data-thickness=".07" value="1">
-                            <p>Minutes</p>
-                        </div>	
-                    </li>
-                    <li>
-                        <div class="ch-item">
-                           <input class="knob second" data-width="130" data-min="0" data-max="60" data-displayPrevious=true data-fgColor="#ffffff" data-readOnly="true"
-                data-skin="tron" data-thickness=".07" value="0" data-bgcolor="#eee">
-                            <p>Seconds</p>
-                        </div>	
-                    </li>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#first").addClass('scroll_item_active');
+        var main = main = $('#scroll');
+        $('.scroll_item').click(function (event) {
 
-                </ul>
+            event.preventDefault();
+            var trgt = $(this).attr('id') + "1";
+            target_offset = $('#' + trgt).offset(),
+            target_top = target_offset.top;
+            $('html, body').animate({
+                scrollTop: target_top
+            }, 500);
+            main.children().removeClass('scroll_item_active');
+
+            $(this).addClass('scroll_item_active');
+
+        });
+        $(window).scroll(function (event) {
+            if ($("#first1").offset().top < $(window).scrollTop() + $(window).outerHeight()) {
+                $("#first").addClass('scroll_item_active');
+                $("#second").removeClass('scroll_item_active');
+                $("#third").removeClass('scroll_item_active');
+                $("#fifth").removeClass('scroll_item_active');
+                $("#fourth").removeClass('scroll_item_active');
+                $("#sixth").removeClass('scroll_item_active');
+                $("#seventh").removeClass('scroll_item_active');
+            }
+            if ($("#second1").offset().top < $(window).scrollTop() + $(window).outerHeight()) {
+                $("#second").addClass('scroll_item_active');
+                $("#first").removeClass('scroll_item_active');
+                $("#third").removeClass('scroll_item_active');
+                $("#fifth").removeClass('scroll_item_active');
+                $("#fourth").removeClass('scroll_item_active');
+                $("#sixth").removeClass('scroll_item_active');
+                $("#seventh").removeClass('scroll_item_active');
+            }
+            if ($("#third1").offset().top < $(window).scrollTop() + $(window).outerHeight()) {
+                $("#third").addClass('scroll_item_active');
+                $("#first").removeClass('scroll_item_active');
+                $("#second").removeClass('scroll_item_active');
+                $("#fifth").removeClass('scroll_item_active');
+                $("#fourth").removeClass('scroll_item_active');
+                $("#sixth").removeClass('scroll_item_active');
+                $("#seventh").removeClass('scroll_item_active');
+            }
+            if ($("#fourth1").offset().top < $(window).scrollTop() + $(window).outerHeight()) {
+                $("#fourth").addClass('scroll_item_active');
+                $("#first").removeClass('scroll_item_active');
+                $("#second").removeClass('scroll_item_active');
+                $("#third").removeClass('scroll_item_active');
+                $("#fifth").removeClass('scroll_item_active');
+                $("#sixth").removeClass('scroll_item_active');
+                $("#seventh").removeClass('scroll_item_active');
+            }
+            if ($("#fifth1").offset().top < $(window).scrollTop() + $(window).outerHeight()) {
+                $("#fifth").addClass('scroll_item_active');
+                $("#first").removeClass('scroll_item_active');
+                $("#second").removeClass('scroll_item_active');
+                $("#third").removeClass('scroll_item_active');
+                $("#fourth").removeClass('scroll_item_active');
+                $("#sixth").removeClass('scroll_item_active');
+                $("#seventh").removeClass('scroll_item_active');
+            }
+        });    
+        //enter the count down date using the format year, month, day, time:time
+        $(".ccounter").ccountdown(2016,08,20,'08:00');
+    });
+</script>
+<body>
+    <div id="scroll">
+        <div id="first" class="scroll_item">&nbsp;</div>
+        <div id="second" class="scroll_item">&nbsp;</div>
+        <div id="third" class="scroll_item">&nbsp;</div>
+        <div id="fourth" class="scroll_item">&nbsp;</div>
+        <div id="fifth" class="scroll_item">&nbsp;</div>
+    </div>
+    <div id="first1" style="background-image:url(img/main_img.jpg); background-size: cover;">
+        <div class="overlay">
+            <div id="Menu">
+                <a href="#second1">OUR STORY &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                <a href="#third1">THE PROPOSAL &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                <a href="#fourth1">BRIDAL PARTY &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                <a href="#fifth1">OUR DATE &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                <a href="#sixth1">EVENT ITINERARY &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                <a href="#seventh1">ROOM BLOCKS &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                <a href="#seventh1">REGISTRY</a>
+                <br/>
+            </div>
+            <div class="overlaytext">
+                <h1>Likhitha & Srujan</h1>
+                <p>Our happily ever after.</p>
             </div>
         </div>
     </div>
-    <!-- FOOTER : begin -->
-    <footer class="centered">
-        <p>Made with <i class=" icon-heart-empty"></i> by <a href="mailto:likhitha@outlook.com">likhitha</a> & <a href="mailto:jonnadul@gmail.com">srujan</a></p>
-    </footer>
-    <!-- FOOTER : end -->
+    <div id="second1" style="background-image:url(img/Arizona2e.jpg); background-size: cover;">
+        <div class="overlay">
+            <div class="overlaytext" style="width: 100%">
+                <div style="float:left; width: 40%; margin-left: 50px; margin-right: 10px">
+                    <h1><strong><center>His Story</center></strong></h2>
+                    <h2>
+                        It all began one fateful afternoon at the Computer Engineering Lab at Virginia Tech.
+                        I was a senior working late on a design project and she 
+                        was a sophomore there to see a TA (Teaching Assistant).
+                        I took an immediate notice of her as she walked in and 
+                        took a seat, and I knew I had to go talk to her but I had 
+                        no idea how to approach her.
+                        </br>
+                        </br>
+                        Conflicted at first, I 
+                        finally got up, walked over, and said hi.
+                        She said hi back. We made small talk, and the 
+                        conversation grew effortlessly. It took a few minutes 
+                        before I realized that she thought that I was
+                        the lab TA there to help her with her project! 
+                        So I went along with it, knowing well that I have 
+                        no idea what her assignment was about.
+           
+                        </br>
+                        </br>
+                        From that botched homework assignment, we went from 
+                        acquaintances running into each
+                        other on campus, to good friends who shared a surprising amount 
+                        of things in common, to something much much more.
+                        </br>
+                        </br>
+                        Since that very day, I knew there was something special about her and
+                        little did I know then how far we would have come together within
+                        the next few years.
+                    </h2>
+                </div>
+                <div style="float:right; width: 40%; margin-right:100px">
+                    <h1><strong><center>Her Story</center></strong></h2>
+                    <h2>
+                        I think it's mostly fortunate serendipity that brought Srujan and I together. 
+                        I always fondly look back to our funny encounter at the CEL lab and chuckle to myself. I don't know what made 
+                        Srujan come up to me that day, but I'm glad he did.
+                        We ran into each other on campus several times that year, and after many hilarious encounters, 
+                        we eventually grew to become really good friends.
+                        </br>
+                        </br>
+                        The Virginia Tech days ended, and I knew I was headed to Seattle after graduation. Coincidentally, a few months after I moved to Seattle, Srujan told me that he's moving to Seattle to work for a start up in the area!
+                        This was a monumental change in both of our lives and this is when we grew from good friends to much more. 
+                        </br>
+                        </br>
+                        We explored the beautiful pacific northwest, made amazing new friends together, inspired each other, and truly learned to be partners along the way. 
+                        Sitting on the ledge by Kerry Park, overlooking 
+                        the beautiful Seattle city, one day, we talked about our life ahead, and things felt right. I knew that day that I wanted to spend the rest of my life with him.  
+                        </br>
 
-    <script>
-        //enter the count down date using the format year, month, day, time:time
-			$(".ccounter").ccountdown(2016,08,20,'08:00');
-    </script>
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="third1" style="background-image:url(img/proposal_vid.gif); background-size: cover;">
+        <div class="overlay">
+            <div class="overlaytext" style="width: 100%">
+                <div style="float:right; width: 40%; margin-right: 100px">
+                    <h1>The Proposal</h1>
+                    <h2>
+                        Getting married is one of those few, life
+                        changing moments, where everything is supposed to be different
+                        afterwards. I don't really see it that way.
+                        I wanted to marry Likhitha because I wanted more of the
+                        same things. More of our life together.
+                        </br>
+                        </br>
+                        My planning for the big day started off, like all things millennial,
+                        with a WhatsApp group chat amongst our closest friends in Seattle.
+                        We used that to discuss every aspect and detail
+                        of the proposal from props and candle arrangements to how we
+                        will be standing on the day of. The weeks prior to the proposal day, we even met regularly to practice
+                        singing a song together -- Falling in Love at a Coffee shop by Landon Pigg, her favorite.  
+                        </br>
+                        </br>
+                        May 13th, 2015 finally arrived. I took the whole day
+                        off to pick up flowers, props, and prepare my sppech. 
+                        I was feeling very nervous. I wanted it all to go perfectly. The
+                        plan was simple, the girls would take Likhitha to a restaurant
+                        off the pier while the guys and I setup and wait at Myrtle Edwards 
+                        Park nearby. Then they would pretend to want to get dessert at
+                        a friends’ place, start walking through the park to where we are, we would
+                        all start singing, I would finally ask her the question. 
+                        Even with meticulous planning, things didn't go as smoothly. As we were all setting up at
+                        the park, I was deep in thought as I was going over the lines of the song as well
+                        as my speech. When I reached into my pocket for my phone, and after checking
+                        across all my pockets, I realized I forgot the ring!!!
+                        A look of sheer horror came across my face as I started retracing my steps.
+                        My friend reassured me that it had to be in his car so we
+                        both bolting across the park while frantically texting the girls to stall
+                        at the restaurant. Thankfully the ring was in the car and by the time we
+                        rushed back to the park we were both completely out of breath.
+                        Then Likhitha and the girls arrived, I was calm after seeing her, we all sang, I asked her to marry me. SHE SAID YES!
+                        </br>
+                        </br>
+                        Looking back, I still can't believe how magical
+                        that day was, how well everything fell into place, and I can't imagine
+                        how I would have been able to pull it all together without the help of our
+                        wonderful friends in seattle.
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="fourth1" style="background-image:url(img/iwp.jpg); background-repeat: repeat-xy; background-size: 400px 300px; background-width: 100%; color:ghostwhite">
+        <!--<div class="bridesmaids" style="background-color: #7a2841; background-width: 100%; font-weight:lighter; padding-top:100px; padding-bottom:100px; text-align:center">-->
+        <div class="overlay">
+            <center>
+                <h1>Bridesmaids</h1>
+                <table style="width:100%; text-align:center; float:center; padding-top:50px;padding-left:100px; padding-right:100px;">
+                    <tr>
+                        <td>
+                            <img src="img/harshap.jpg"  style="width:150px;height:150px;border-radius:50%" align="absmiddle">
+                            <h4>Harsha Patha</h4>
+                            <p>Maid of Honor</p>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            <img src="img/varshad.jpg" style="width:150px;height:150px;border-radius:50%" align="absmiddle">
+                            <h4>Varsha Doggala</h4>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            <img src="img/aditik.jpg" style="width:150px;height:150px;border-radius:50%" align="absmiddle">
+                            <h4>Aditi Kumar</h4>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            <img src="img/clios.jpg" style="width:150px;height:150px;border-radius:50%" align="absmiddle">
+                            <h4>Clio Smurro</h4>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            <img src="img/tanvis.jpg" style="width:150px;height:150px;border-radius:50%" align="absmiddle">
+                            <h4>Tanvi Surti</h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                            <img src="img/jasleens.jpg" style="width:150px;height:150px;border-radius:50%" align="absmiddle">
+                            <h4>Jasleen Singh </h4>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            <img src="img/megq.jpg" style="width:150px;height:150px;border-radius:50%" align="absmiddle">
+                            <h4>Meg Quintero</h4>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            <img src="img/yaminis.jpg" style="width:150px;height:150px;border-radius:50%" align="absmiddle">
+                            <h4>Swetha Haridas</h4>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            <img src="img/nivedak.jpg" style="width:150px;height:150px;border-radius:50%" align="absmiddle">
+                            <h4>Niveda<br>Krishnamoorthy</br></h4>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </table>
+            </center>
+        </div>
+    </div>
+    <div id="fourth1half" style="background-image:url(img/iwp.jpg); background-repeat: repeat-xy; background-size: 400px 300px; background-width: 100%; color:ghostwhite">
+        <!--<div class="groomsman" style="background-color:#051e4f; background-size: cover; width:100%; font-weight: lighter; padding-top:100px; padding-bottom:500px; text-align:center; float:center">-->
+        <div class="overlay">
+            <center>
+                <h1>Groomsmen</h1>
+                <table style="width:100%; text-align:center; float:center; padding-left:100px; padding-right:100px; padding-top:50px">
+                    <tr>
+                        <td>
+                            <img src="img/stevenm.jpg"  style="width:150px;height:150px;border-radius:50%" align="absmiddle">
+                            <h4>Steven Maheshwary</h4>
+                            <p>Best Man</p>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            <img src="img/bhanup.jpg" style="width:150px;height:150px;border-radius:50%" align="absmiddle">
+                            <h4>Bhanu Peddi</h4>
+                            <p>Best Man</p>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            <img src="img/timb.jpg" style="width:150px;height:150px;border-radius:50%" align="absmiddle">
+                            <h4>Tim Berman</h4>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            <img src="img/joshb.jpg" style="width:150px;height:150px;border-radius:50%" align="absmiddle">
+                            <h4>Josh Berman</h4>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            <img src="img/devinw.jpg" style="width:150px;height:150px;border-radius:50%" align="absmiddle">
+                            <h4>Devin Williams</h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                            <img src="img/saiduttg.jpg" style="width:150px;height:150px;border-radius:50%" align="absmiddle">
+                            <h4>Saidutt Ganji</h4>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            <img src="img/arifm.jpg" style="width:150px;height:150px;border-radius:50%" align="absmiddle">
+                            <h4>Arif Masood</h4>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            <img src="img/krishnav.jpg" style="width:150px;height:150px;border-radius:50%" align="absmiddle">
+                            <h4>Krishna Vudata</h4>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            <img src="img/visak.jpg" style="width:150px;height:150px;border-radius:50%" align="absmiddle">
+                            <h4>Visakhan<br>Kattappuram</h4>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </table>
+            </center>
+        </div>
+    </div>
+    <div id="fifth1" style="background-image:url(img/crystalroom.jpg); background-size: cover;">
+        <div class="overlay">
+            <div style="padding-top: 50px">
+                <center>
+                    <h1>Our Date</h1>
+                    <h2>August 20, 2016</br>
+                        at <bold><u><a href="http://washington.intercontinental.com/">The Willard</a></u></bold>, Washington D.C.
+                    </h2>
+                </center>
+                <div class="ccounter" align="center" id="Clock" style="padding-top: 50px">
+                    <ul class="ch-grid" align="center">
+                        <li>
+                            <div class="ch-item">
+                                <div style="padding-left:20px">
+                                    <input class="knob days" data-width="130" data-min="0" data-max="365" data-displayPrevious=true data-fgColor="#ffffff" data-readOnly="true"
+                                        data-skin="tron" data-thickness=".07">
+                                </div>
+                                <h2><strong><center>Days</center></strong></h2>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="ch-item">
+                                <div style="padding-left:20px">
+                                    <input class="knob hour" data-width="130" data-min="0" data-max="24" data-displayPrevious=true data-fgColor="#ffffff" data-readOnly="true"
+                                        data-skin="tron" data-thickness=".07" value="1">
+                                </div>
+                                <h2><strong><center>Hours</center></strong></h2>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="ch-item">
+                                <div style="padding-left:20px">
+                                    <input class="knob minute" data-width="130" data-min="0" data-max="60" data-displayPrevious=true data-fgColor="#ffffff" data-readOnly="true"
+                                        data-skin="tron" data-thickness=".07" value="1">
+                                </div>
+                                <h2><strong><center>Minutes</center></strong></h2>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="ch-item">
+                                <div style="padding-left:20px">
+                                    <input class="knob second" data-width="130" data-min="0" data-max="60" data-displayPrevious=true data-fgColor="#ffffff" data-readOnly="true"
+                                        data-skin="tron" data-thickness=".07" value="0" data-bgcolor="#eee">
+                                </div>
+                                <h2><strong><center>Seconds</center></strong></h2>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sixth1" style="background-image:url(img/weddingparty.jpg); background-size: cover;">
+        <div class="overlay">
+            <center>
+                <h1>Event Itinerary</h1>
+                <h2>        
+                    <ul style="list-style-type: none; padding-top:50px; padding-bottom:50px">
+                        <li>Baraat, 8:00 AM</li>
+                        </br>
+                        <li>Wedding Ceremony, 9:30 AM</li>
+                        </br>
+                        <li><i>Muhurtham at 11:35AM</i></li>
+                        </br>
+                        <li>Luncheon, 12:00 PM</li>
+                        </br>
+                        <li>Cocktail Hour, 6:30 PM</li>
+                        </br>
+                        <li>Dinner Reception, 7:30 PM</li>
+                    </ul>
+                </h2>
+            </center>
+        </div>
+    </div>
+    <div id="seventh1" style="background-image:url(img/willard.jpg); background-size: cover;">
+        <div class="overlay">
+            <center>
+                <div style="padding-top:100px; padding-below:100px; width:50%; float:center; text-align:center">
+                    <h1> Room Blocks </h1>
+                    <div style="padding-top:50px; padding-bottom:50px">
+                        <h2>
+                            We have negotitated with three hotels for Room Blocks around The Willard, <bold><u><a href="mailto:likhitha@outlook.com;jonnadul@gmail.com"> reach out to us</a></u></bold>
+                            for more information on hotel reservation codes, traveling logistics, or anything else we can assist you with. 
+                        </h2>
+                        </br>
+                        </br>
+                    </div>
+                    <h1>Gifts and Registry </h1>
+                    <div style="padding-top:20px">
+                        <h2>
+                            We kindly request NO boxed gifts at all of our events. </br>
+                            Our wedding registry is available at
+                            <bold><u><a href="http://www.likhithasrujan.zankyou.com">http://www.likhithasrujan.zankyou.com</a></u></bold> 
+                            </br>
+                            </br>
+                            </br>
+                            </br>
+                            We look forward to enjoying our wedding with you!
+                        </h2>
+                    </div>
+                </div>
+            </center>
+        </div>
+        <footer style="padding-top:5px; padding-bottom:5px; text-align:center">
+        <p><i class="fa fa-code" aria-hidden="true"></i> with <i class="fa fa-heart" aria-hidden="true"></i> by likhitha & srujan</p>
+        </footer>
+    </div>
 </body>
-
 </html>

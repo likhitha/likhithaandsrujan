@@ -1,17 +1,16 @@
 #Menu{
-    padding-top:8px;
+    padding-top:15px;
     padding-bottom:55px;
-    font-size: 13px;
+    font-size: 18px;
     text-align: center;
 }
-#Menu a { color: crimson;  text-decoration:none;}
+#Menu a { color: maroon; text-decoration:none; font-size: 16px;}
 
 body { 
     margin: 0; 
-    font-family: 'Poiret One', cursive;
-    color: #363a3f; 
-    background-color: white;
-    padding-top: 15px;
+    font-family: 'Josefin Sans', cursive;
+    /*background-color: #b58c7f;*/
+    padding-top: 0;
     font-size: 30px;
     font-weight: lighter;}
 #elephant{
@@ -22,17 +21,16 @@ body {
     height:300px;
 }
 #Clock{
-    background-color: crimson;
-    padding-top: 40px;
+    padding-top: 00px;
     padding-bottom:40px;
-    color: white;
-     font-size: 14px;
+    color: ghostwhite;
+    font-size: 14px;
     align-items: center;
 }
 
 #ClockHeader{
     font-family: 'Poiret One', cursive;
-    color:white;
+    color: ghostwhite;
 }
 #ClockHeader h1{
     font-family: 'Clicker Script', cursive;
@@ -41,31 +39,42 @@ body {
 #ClockHeader h4{
     padding-bottom: 20px;
 }
-ul li{
-      	display: inline-block;
-      	text-align: center;
-        padding-top:0px;
-      	padding-left: 5px;
-      	padding-right: 5px;
-        padding-bottom: 5px;
-      	font-family: 'Poiret One', cursive;
-        font-weight: lighter;
-      }
+
 footer { 
     font-family: 'Pacifico', cursive; 
-    font-size: 14px;
     position: relative; 
-    padding: 35px 0 45px 0; 
-    font-size: 0.9em;
-    font-weight: 100; }
+    padding: 45px 0 0 0; 
+}
+
 footer p { 
     margin: 0;
-    font-size: 14px; }
-footer.centered { 
-    text-align: center; }
+    font-size: 12px;
+    font-weight: 5;
+}
 
-footer { color: #616871; font-size: 14px;}
-footer a { color: crimson;  text-decoration:none; font-size: 14px;}
+footer.centered { 
+    text-align: center;
+}
+
+footer {
+    background-color: black;
+    color: ghostwhite; font-size: 14px;
+}
+
+footer a {
+    color: crimson;
+    text-decoration:none;
+    font-size: 14px;
+}
+
+.fa-heart {
+    color: crimson;    
+}
+
+.fa-code {
+    color: #659AB2;
+}
+
 
 /* -----------------------------------------------------
 
@@ -173,4 +182,302 @@ footer a { color: crimson;  text-decoration:none; font-size: 14px;}
     #title h1 { font-size: .8em; }
     /* SCREEN WIDTH */
     #screen-width { content: "480"; }
+}
+
+/* ------------------------------
+
+    SCROLL
+
+------------------------------ */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#scroll {
+    position: fixed;
+    top: 50%;
+    right: 30px;
+    z-index: 999;
+}
+.scroll_item {
+    border: 2px solid ghostwhite;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+}
+.scroll_item:hover{
+    background: ghostwhite;
+}
+.scroll_item_active {
+    border: 2px solid ghostwhite;
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    background-color: ghostwhite;
+}
+#first1{
+    width: 100%;
+    height: 1020px;
+    background:url("img/main_img.jpg");
+    background-size: cover;
+    top: 0px;
+}
+#first1 .overlay {
+    background-color: rgba(0,0,0,0.30);
+    position: center;
+    top: 0px;
+    height: 1000px;
+    width: 100%;
+    z-index: 1;
+}
+#first1 .overlaytext {
+    width: 100%;
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    font-weight: lighter;
+    color: goldenrod;
+    padding-top:650px;
+    font-size: 50px;
+    font-kerning: auto;
+    position: relative;
+}
+#second1 {
+    padding-bottom:40px;
+    width: 100%;
+    height: 1000px;
+    background-color: #34685B;
+    position: absolute;
+    top: 1000px;
+    color: slategray;
+    font-size: 14px;
+}
+#second1 .overlay {
+    background-color: rgba(0,0,0, 0.50);
+    position: center;
+    top: 1000px;
+    height: 1000px;
+    width: 100%;
+    z-index: 1;
+}
+#second1 .overlaytext {
+    background-color: black;
+    text-align: left;
+    font-weight: lighter;
+    color: ghostwhite;
+    font-kerning: auto;
+    position: relative;
+}
+#second1 .overlaytext h1{
+    text-align: center;
+    padding-top: 50px;
+    font-family: 'Clicker Script', cursive;
+    font-size: 40px;
+}
+#second1 .overlaytext h2{
+    padding-top: 50px;
+    margin-left: 5px;
+    text-align: left;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+#third1{
+    width: 100%;
+    height: 1000px;
+    position: absolute;
+    top: 2000px;
+}
+#third1 .overlay {
+    background-color: rgba(0,0,0, 0.20);
+    position: center;
+    top: 3000px;
+    height: 1000px;
+    width: 100%;
+    padding-bottom: 0px;
+    z-index: 1;
+    font-size: 14px;
+}
+#third1 .overlaytext {
+    background-color: black;
+    text-align: left;
+    font-weight: lighter;
+    color: ghostwhite;
+    font-kerning: auto;
+    position: relative;
+}
+
+#third1 .overlaytext h1{
+    text-align: center;
+    padding-top: 50px;
+    font-family: 'Clicker Script', cursive;
+    font-size: 40px;
+}
+#third1 .overlaytext h2{
+    padding-top: 50px;
+    margin-left: 5px;
+    text-align: left;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+#fourth1{
+    width: 100%;
+    top: 3000px;
+    height: 775px;
+    background-color: ghostwhite;
+    position: absolute;
+    padding-bottom: 0px;
+}
+#fourth1 .overlay {
+    background-color: rgba(207,138,170, 0.30);
+    top: 3000px;
+    height: 775px;
+    position: center;
+    font-weight:lighter;
+    padding-top:100px;
+    padding-bottom:100px;
+    z-index: 1;
+    text-align:center
+}
+#fourth1 .overlay h1{
+    font-family: 'Clicker Script', cursive;
+    font-size: 60px;
+}
+#fourth1half{
+    width: 100%;
+    top: 3775px;
+    height: 775px;
+    background-color: ghostwhite;
+    position: absolute;
+    padding-bottom: 0px;
+}
+#fourth1half .overlay {
+    background-color: rgba(0,100,5, 0.50);
+    top: 3000px;
+    height: 775px;
+    position: center;
+    font-weight:lighter;
+    padding-top:100px;
+    padding-bottom:100px;
+    z-index: 1;
+    text-align:center
+}
+#fourth1half .overlay h1{
+    font-family: 'Clicker Script', cursive;
+    font-size: 60px;
+}
+#fifth1 {
+    width: 100%;
+    top: 4550px;
+    height: 600px;
+    background-color: #b58c7f;
+    color:ghostwhite;
+    position: absolute;
+    padding-bottom: 0px;
+}
+#fifth1 .overlay {
+    background-color: rgba(0,0,0, 0.60);
+    position: center;
+    top: 4550px;
+    height: 600px;
+    width: 100%;
+    padding-bottom: 0px;
+    z-index: 1;
+    color:ghostwhite;
+    font-size: 14px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#fifth1 .overlay a{
+    color: lightblue;
+    text-decoration:none;
+}
+#fifth1 .overlay h1{
+    font-family: 'Clicker Script', cursive;
+    font-size: 150px;
+}
+#fifth1 .overlay h2{
+    
+    font-size: 25px;
+}
+#fifth1 .overlay .x{
+   width: 300px;
+   position: absolute;
+   left: 50%;
+   margin-left: -150px; /*half the size of width*/
+}
+#fifth1 .overlay p {
+    padding-bottom: 40px;
+}
+#fifth1 .overlay .ccounter ul li {
+    display: inline-block;
+    text-align: center;
+    padding-top:0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-family: 'Poiret One', cursive;
+    font-weight: lighter;
+}
+#fifth1 .iter ul li {
+    list-style: outside none;
+    color:ghostwhite;
+}
+#sixth1 {
+    width: 100%;
+    height: 700px;
+    position: absolute;
+    top: 5150px;
+    color: black;
+}
+#sixth1 .overlay {
+    background-color: rgba(0,0,0, 0.60);
+    position: center;
+    top: 5150px;
+    height: 700px;
+    width: 100%;
+    padding-bottom: 0px;
+    z-index: 1;
+    color:ghostwhite;
+    font-size: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top:100px;
+    padding-bottom:150px;
+}
+#sixth1 h1{
+    font-family: 'Clicker Script', cursive;
+    font-size: 80px;
+}
+#sixth1 .overlay h2{
+    font-size: 25px;
+}
+#seventh1 {
+    width: 100%;
+    height: 800px;
+    position: absolute;
+    top: 5850px;
+    color: black;
+}
+#seventh1 .overlay {
+    background-color: rgba(0,0,0, 0.60);
+    position: center;
+    top: 5850px;
+    height: 800px;
+    width: 100%;
+    padding-bottom: 0px;
+    z-index: 1;
+    color:ghostwhite;
+    font-size: 14px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#seventh1 h1{
+    font-family: 'Clicker Script', cursive;
+    font-size: 60px;
+}
+#seventh1 h2{
+    font-size: 25px;
+}
+#seventh1 .overlay a{
+    color: lightblue;
+    text-decoration:none;
 }
